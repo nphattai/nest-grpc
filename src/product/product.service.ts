@@ -58,6 +58,7 @@ export class ProductService {
   public async decreaseStock({
     id,
     orderId,
+    quantity,
   }: DecreaseStockRequestDto): Promise<DecreaseStockResponse> {
     const product: Product = await this.repository.findOne({
       select: ['id', 'stock'],
@@ -82,8 +83,14 @@ export class ProductService {
       };
     }
 
-    await this.repository.update(product.id, { stock: product.stock - 1 });
-    await this.decreaseLogRepository.insert({ product, orderId });
+    if (quantity > product.stock) {
+      return { error: ['Stock too low'], status: HttpStatus.CONFLICT };
+    }
+
+    await this.repository.update(product.id, {
+      stock: product.stock - quantity,
+    });
+    await this.decreaseLogRepository.insert({ product, orderId, quantity });
 
     return { error: null, status: HttpStatus.OK };
   }

@@ -3864,7 +3864,7 @@ neo-async@^2.6.2:
 
 "nest-grpc-proto@git+https://github.com/nphattai/nest-grpc-proto.git":
   version "1.0.0"
-  resolved "git+https://github.com/nphattai/nest-grpc-proto.git#4685223250a1503501f442e88cccfbc359dde0fc"
+  resolved "git+https://github.com/nphattai/nest-grpc-proto.git#86e79e1f07ba47bfdcb5a8d54200c66b3c7929e6"
 
 node-abort-controller@^3.0.1:
   version "3.1.1"

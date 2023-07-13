@@ -32,4 +32,7 @@ export class DecreaseStockRequestDto implements DecreaseStockRequest {
 
   @IsNumber({ allowInfinity: false, allowNaN: false })
   public readonly orderId: number;
+
+  @IsNumber({ allowInfinity: false, allowNaN: false })
+  public readonly quantity: number;
 }

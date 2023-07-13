@@ -12,6 +12,9 @@ export class StockDecreaseLog extends BaseEntity {
   @PrimaryGeneratedColumn()
   public id!: number;
 
+  @Column({ type: 'integer' })
+  public quantity!: number;
+
   /*
    * Relation IDs
    */
