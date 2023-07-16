@@ -3,7 +3,7 @@ import { NestFactory } from '@nestjs/core';
 import { Transport } from '@nestjs/microservices';
 import { join } from 'path';
 import { AppModule } from './app.module';
-import { protobufPackage } from './auth/auth.pb';
+import { protobufPackage } from 'proto/dist/auth.pb';
 import { HttpExceptionFilter } from './auth/filter/http-exception.filter';
 
 async function bootstrap() {

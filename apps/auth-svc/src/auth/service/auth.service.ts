@@ -9,7 +9,7 @@ import {
   RegisterResponse,
   ValidateRequest,
   ValidateResponse,
-} from '../auth.pb';
+} from 'proto/dist/auth.pb';
 import { JwtService } from './jwt.service';
 
 @Injectable()

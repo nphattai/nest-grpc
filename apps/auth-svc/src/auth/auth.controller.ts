@@ -10,7 +10,7 @@ import {
   LoginResponse,
   RegisterResponse,
   ValidateResponse,
-} from './auth.pb';
+} from 'proto/dist/auth.pb';
 import { AuthService } from './service/auth.service';
 
 @Controller('auth')
