@@ -1,18 +1,15 @@
-import {
-  BadRequestException,
-  HttpStatus,
-  Inject,
-  Injectable,
-  OnModuleInit,
-} from '@nestjs/common';
+import { HttpStatus, Inject, Injectable, OnModuleInit } from '@nestjs/common';
 import { ClientGrpc } from '@nestjs/microservices';
 import { InjectRepository } from '@nestjs/typeorm';
 import { firstValueFrom } from 'rxjs';
 import { Repository } from 'typeorm';
 import { CreateOrderRequestDto } from './order.dto';
 import { Order } from './order.entity';
-import { CreateOrderResponse } from './order.pb';
-import { PRODUCT_SERVICE_NAME, ProductServiceClient } from './product.pb';
+import { CreateOrderResponse } from 'proto/dist/order.pb';
+import {
+  PRODUCT_SERVICE_NAME,
+  ProductServiceClient,
+} from 'proto/dist/product.pb';
 
 @Injectable()
 export class OrderService implements OnModuleInit {

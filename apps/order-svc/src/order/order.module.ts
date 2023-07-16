@@ -4,7 +4,10 @@ import { OrderService } from './order.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Order } from './order.entity';
 import { ClientsModule, Transport } from '@nestjs/microservices';
-import { PRODUCT_PACKAGE_NAME, PRODUCT_SERVICE_NAME } from './product.pb';
+import {
+  PRODUCT_PACKAGE_NAME,
+  PRODUCT_SERVICE_NAME,
+} from 'proto/dist/order.pb';
 
 @Module({
   imports: [
