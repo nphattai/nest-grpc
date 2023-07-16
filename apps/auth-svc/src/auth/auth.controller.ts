@@ -35,7 +35,6 @@ export class AuthController {
 
   @GrpcMethod(AUTH_SERVICE_NAME, 'Validate')
   async validate(payload: ValidateRequestDto): Promise<ValidateResponse> {
-    console.log({ payload });
     return this.authService.validate({
       token: payload.token,
     });

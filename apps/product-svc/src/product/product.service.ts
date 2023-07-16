@@ -48,8 +48,6 @@ export class ProductService {
     product.stock = payload.stock;
     product.price = payload.price;
 
-    console.log({ product });
-
     await this.repository.save(product);
 
     return { id: product.id, error: null, status: HttpStatus.OK };
