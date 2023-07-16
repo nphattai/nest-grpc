@@ -13,7 +13,7 @@ async function bootstrap() {
       options: {
         url: '0.0.0.0:50053',
         package: protobufPackage,
-        protoPath: join('node_modules/nest-grpc-proto/proto/product.proto'),
+        protoPath: join('node_modules/proto/dist/proto/product.proto'),
       },
     },
   );

@@ -5,8 +5,9 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "proto:install": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./proto --ts_proto_out=interfaces/ proto/*.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb",
-    "build": "rm -rf & npm run proto:install & tsc"
+    "compile": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./proto --ts_proto_out=interfaces/ proto/*.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb",
+    "copy:proto": "cp -rv ./proto/ dist/proto/",
+    "build": "rm -rf & npm run compile & npm run copy:proto & tsc -p tsconfig.build.json"
   },
   "keywords": [],
   "author": "",

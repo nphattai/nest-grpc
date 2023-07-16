@@ -14,7 +14,7 @@ async function bootstrap() {
       options: {
         url: '0.0.0.0:50051',
         package: protobufPackage,
-        protoPath: join('node_modules/nest-grpc-proto/proto/auth.proto'),
+        protoPath: join('node_modules/proto/dist/proto/auth.proto'),
       },
     },
   );
