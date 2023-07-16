@@ -3,7 +3,7 @@ import {
   CreateProductRequest,
   DecreaseStockRequest,
   FindOneRequest,
-} from './product.pb';
+} from 'proto/dist/product.pb';
 
 export class FindOneRequestDto implements FindOneRequest {
   @IsNumber({ allowInfinity: false, allowNaN: false })

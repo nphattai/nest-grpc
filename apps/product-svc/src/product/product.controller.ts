@@ -10,7 +10,7 @@ import {
   DecreaseStockResponse,
   FindOneResponse,
   PRODUCT_SERVICE_NAME,
-} from './product.pb';
+} from 'proto/dist/product.pb';
 import { ProductService } from './product.service';
 
 @Controller('product')

@@ -11,7 +11,7 @@ import {
   CreateProductResponse,
   DecreaseStockResponse,
   FindOneResponse,
-} from './product.pb';
+} from 'proto/dist/product.pb';
 import { StockDecreaseLog } from './entity/stock-decrease-log.entity';
 
 @Injectable()
