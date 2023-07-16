@@ -6,7 +6,7 @@ import {
   UnauthorizedException,
   Inject,
 } from '@nestjs/common';
-import { ValidateResponse } from './auth.pb';
+import { ValidateResponse } from 'proto/interfaces/auth.pb';
 import { AuthService } from './auth.service';
 
 @Injectable()

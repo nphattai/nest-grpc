@@ -15,7 +15,7 @@ import {
   CreateOrderResponse,
   ORDER_SERVICE_NAME,
   OrderServiceClient,
-} from './order.pb';
+} from 'proto/interfaces/order.pb';
 
 @Controller('order')
 export class OrderController implements OnModuleInit {

@@ -1,6 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ProductController } from './product.controller';
-import { PRODUCT_PACKAGE_NAME, PRODUCT_SERVICE_NAME } from './product.pb';
+import {
+  PRODUCT_PACKAGE_NAME,
+  PRODUCT_SERVICE_NAME,
+} from 'proto/interfaces/product.pb';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 
 @Module({
