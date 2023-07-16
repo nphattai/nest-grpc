@@ -3,7 +3,7 @@ import { ProductController } from './product.controller';
 import {
   PRODUCT_PACKAGE_NAME,
   PRODUCT_SERVICE_NAME,
-} from 'proto/interfaces/product.pb';
+} from 'proto/dist/product.pb';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 
 @Module({

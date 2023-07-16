@@ -17,7 +17,7 @@ import {
   FindOneResponse,
   PRODUCT_SERVICE_NAME,
   ProductServiceClient,
-} from 'proto/interfaces/product.pb';
+} from 'proto/dist/product.pb';
 
 @Controller('product')
 export class ProductController implements OnModuleInit {

@@ -1,10 +1,12 @@
 {
   "name": "proto",
+  "private": true,
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./proto --ts_proto_out=interfaces/ proto/*.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb"
+    "proto:install": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./proto --ts_proto_out=interfaces/ proto/*.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb",
+    "build": "rm -rf & npm run proto:install & tsc"
   },
   "keywords": [],
   "author": "",

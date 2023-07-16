@@ -5,7 +5,7 @@ import {
   AUTH_SERVICE_NAME,
   AuthServiceClient,
   ValidateResponse,
-} from 'proto/interfaces/auth.pb';
+} from 'proto/dist/auth.pb';
 
 @Injectable()
 export class AuthService {

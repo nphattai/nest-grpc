@@ -8,7 +8,7 @@ import {
   LoginResponse,
   RegisterRequest,
   RegisterResponse,
-} from 'proto/interfaces/auth.pb';
+} from 'proto/dist/auth.pb';
 
 @Controller('auth')
 export class AuthController implements OnModuleInit {
